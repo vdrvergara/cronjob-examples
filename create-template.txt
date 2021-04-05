@@ -1,0 +1,6 @@
+# Expand the template into multiple files, one for each item to be processed.
+mkdir ./jobs
+for i in apple banana cherry
+do
+  cat job-tmpl.yaml | sed "s/\$ITEM/$i/" > ./jobs/job-$i.yaml
+done
