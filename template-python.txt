@@ -1,0 +1,3 @@
+alias render_template='python -c "from jinja2 import Template; import sys; print(Template(sys.stdin.read()).render());"'
+
+cat job.yaml.jinja2 | render_template > jobs.yaml
